@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/appWidgetBackgroundColor"
+    android:padding="@dimen/widget_margin"
+    android:theme="@style/ThemeOverlay.Lista.AppWidgetContainer">
+
+    <TextView
+        android:id="@+id/widget_t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?attr/appWidgetBackgroundColor"
+        android:text="@string/widgett1"
+        android:textColor="?attr/appWidgetTextColor"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/widget_b1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/widget_t1"
+        android:text="@string/www" />
+
+    <ImageView
+        android:id="@+id/imageWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/ImageWidget"
+        android:layout_below="@+id/widget_b1"
+        tools:srcCompat="@drawable/flower" />
+
+    <Button
+        android:id="@+id/widget_b2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageWidget"
+        android:text="@string/zmien_obraz" />
+
+    <ImageButton
+        android:id="@+id/widget_prev"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/widget_b2"
+
+        android:background="@drawable/prevbutton"
+        android:contentDescription="@string/playprev"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageButton
+        android:id="@+id/widget_play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/widget_b2"
+
+        android:layout_toEndOf="@+id/widget_prev"
+        android:background="@drawable/playbutton"
+        android:contentDescription="@string/play"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/widget_next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/widget_b2"
+        android:layout_toEndOf="@+id/widget_play"
+        android:background="@drawable/nextbutton"
+        android:contentDescription="@string/playnext"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
+    <ImageButton
+        android:id="@+id/widget_stop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/widget_b2"
+        android:layout_toEndOf="@+id/widget_next"
+        android:background="@drawable/stopbutton"
+        app:srcCompat="@drawable/stopbutton"
+        android:contentDescription="@string/widgetstop" />
+
+</RelativeLayout>
